@@ -2,8 +2,6 @@
 ;(function($) {
    $.fn.css3PIE = function(options) {
      var opts = $.extend({}, { htcUrl:'js/PIE.htc' }, options);  // "htcUrl" defines the path where the htc is located
-     return this.each(function(i) {
-       this.style.behavior = 'url('+opts.htcUrl+')'; // ok it's time to rock :)
-     });
+     return this.css('behavior', 'url('+opts.htcUrl+')'); // ok it's time to rock :)
    };
 })(jQuery); // jquery goodness !!!
