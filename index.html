@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>css3PIE jQuery Plugin Test</title>
+    <link rel="stylesheet" media="all" href="css/global.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="js/css3pie.plugin.js"></script>
+    <script>
+      $(document).ready(function() {
+         $('div').css3PIE();
+         
+         // some fun :)
+         var rounded=10;
+         var limitRounded=50;
+         roundAnim = setInterval(function(t) {
+            if (rounded == limitRounded) {
+               clearInterval(roundAnim);
+            }
+            $('.rounded').css({
+               'border-radius':rounded,
+               '-moz-border-radius':rounded,
+               '-webkit-border-radius':rounded
+            });
+            rounded++;
+         },100);
+      })
+    </script>
+  </head>
+  <body>
+
+    <div class="rounded">
+      Gradient &amp; Border-radius test
+    </div>
+    
+    <div class="shadowed">
+      Gradient &amp; Box-shadow test
+    </div>
+    
+    <div class="rounded shadowed">
+      Gradient, Box-shadow &amp; border-radius test
+    </div>
+  </body>
+</html>

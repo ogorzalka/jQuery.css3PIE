@@ -1,0 +1,39 @@
+body {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+div {
+    background-color:yellow;
+    border: 1px solid #999;
+    width:500px;
+    padding:20px;
+    margin-bottom:20px;
+    background-color:rgb(88,135,186);
+    color:#fff;
+    background-image:-moz-linear-gradient(
+        center bottom,
+        rgb(88,135,186) 9%,
+        rgb(41,76,117) 55%
+    );
+    background-image:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.09, rgb(88,135,186)),
+        color-stop(0.55, rgb(41,76,117))
+    );
+    -pie-background: linear-gradient(rgb(88,135,186),rgb(41,76,117));
+}
+
+.rounded {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.shadowed {
+    -webkit-box-shadow: 0 0 10px #000;
+    -moz-box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #000;
+}
+
